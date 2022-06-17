@@ -1,0 +1,367 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #000B76;
+    --cor2: #3D0782;
+    --c0r3: #1E078C;
+    --cor4: #07378C;
+    --cor5: #075482;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 30px 0 0;
+    /* background: var(--cor1); */
+}
+.container {
+    /* background: yellow;  */
+    width: 100%;
+    max-width: 1100px;
+    margin: -5px auto;
+    padding: 0 30px;
+    overflow: hidden;
+    
+}
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+}
+.header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 12px 65px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: opacity 0.2s ease-in-out;
+}
+button:hover {
+    opacity: 0.8;
+}
+button i {
+    margin-right: 8px;
+    font-size: 24px;
+}
+button span {
+    margin: 0;
+    font-size: 16px;
+}
+
+.black-button {
+    background-color: black;
+    box-shadow: 0 4px 14px 0 rgb(0 0 0 / 39%);
+}
+.blue-button {
+    background-color: #075482;
+    box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+}
+.header-actions .black-button {
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.grid-align-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+}
+.grid-align-center h1 {
+    color: black;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 45px;
+
+}
+p {
+    color: rgb(121, 116, 116);
+    font-size: 14px;
+    line-height: 25px;
+}
+.grid-align-center h1 span {
+    color: #075482; 
+}
+
+
+.projects-title {
+    text-align: center;
+    margin-top: 0;
+}
+.projects-title h1 {
+    font-size: 40px;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-bottom: 50px;
+}
+svg {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    
+}
+
+.img { 
+    padding: 0px;
+    width: 100%;
+    /* filter: drop-shadow(0 0 .8rem rgba(58, 67, 196, 0.616)) */
+    
+}    
+.rodape {
+    background: var(--cor1);
+}
+
+article {
+    padding: 25px 20px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .8s ease-in-out;
+}
+article p {
+    text-align: center justify;
+    
+}
+article button {
+    width: 100%;
+    margin-top: 20px;
+}
+article i {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+article:hover {
+    box-shadow: 0 8px 20px white;
+    
+}
+.purple-button {
+    background-color: #3D0782;
+    box-shadow: 0 4px 10px #392697;
+}
+.gray-button {
+    background-color: gray;
+    box-shadow: 0 4px 10px rgb(109, 106, 106);
+}
+.yellow-button {
+    background-color: rgba(238, 238, 27, 0.692);
+    box-shadow: 0 4px 10px rgb(241, 241, 104);
+}
+
+.red-button {
+    background-color: rgba(255, 0, 0, 0.425);
+    box-shadow: 0 4px 10px rgba(179, 19, 13, 0.514);
+}
+.dark-button {
+    background-color: #000B76;
+    box-shadow: 0 4px 10px rgb(48, 41, 146);
+}
+.green-button {
+    background-color: green;
+    box-shadow: 0 4px 10px rgb(22, 139, 28);
+}
+.cor-button {
+    background-color: #1E078C;
+    box-shadow: 0 4px 10px rgb(17, 33, 179);
+}
+
+/* Mobile */
+
+.mobole {
+    overflow: hidden;
+}
+
+.mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 80px;
+    padding: 50px 0px;
+}
+.mobile-container {
+    position: relative;
+    transform: rotate(-30deg) skew(25deg);
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 80px ;
+    
+}
+.mobile-grid img{
+    height: 350px;
+    width: auto;
+    position: absolute; 
+    
+}
+
+.mobile-grid img:nth-child(1){
+    opacity: 0.3;
+    z-index: 1;
+}
+.mobile-container-img-2 {
+    opacity: 0.5;
+    z-index: 2;
+    animation: img-2 2s forwards ;
+}
+.mobile-container-img-3 {
+    opacity: 0.8;
+    z-index: 3;
+    animation: img-3 2s forwards;
+}
+.mobile-container-img-4 {
+    opacity: 1;
+    z-index: 4;
+    animation: img-4 2s forwards;
+}
+/* font Awesome */
+@keyframes img-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(40px, -40px);
+    }
+}
+@keyframes img-3 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(80px, -80px);
+    }
+}
+@keyframes img-4 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(120px, -120px);
+    }
+}
+
+
+/* responsive */
+
+@media (max-width: 900px) {
+    .header-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .img {
+        display: none;
+    }
+    .mobile-container img {
+        display: none;
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr) ;
+    }
+
+    .mobile-grid {
+        grid-template-columns: 1fr;
+    }
+    .mobile-container {
+        height: 0px;
+    }
+    .goTop {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .header-actions a {
+        width: 100%;
+    }
+    .header-actions button {
+        width: 100%;
+    }
+    .blue-button {
+        margin-top: 10px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    background: gray;
+    padding: 30px 0;
+    overflow: hidden;
+    
+}
+.whatsapp {
+    background: green;
+    margin: 20px 0;
+}
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: black;
+}
+
+.info-media i {
+    font-size: 50px;
+    transition: 0.4s ease-in-out;
+}
+
+.info-media i:hover {
+    color: #000B76;
+    cursor: pointer;
+}
+
+.goTop {
+    position: fixed;
+    padding: 15px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Animate.css */  
+/* wow.js */
+
+/* Custom */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #075482;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(109, 109, 109);
+}
